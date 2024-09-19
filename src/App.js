@@ -41,7 +41,7 @@ const App = () => {
         <Navbar />
         <Container maxWidth="lg" sx={{ minHeight: '80vh', paddingTop: '50px' }}>
           <Routes>
-            <Route path="/" element={<Landing />} />
+            <Route exact path="/" element={<Landing />} />
             <Route path="/projects" element={<ComingSoon />} />
             <Route path="/work-experience" element={<WorkExperience />} /> 
             <Route path="/outsource-tech-team" element={<OutSourceTechTeam/>} />
