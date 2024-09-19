@@ -1,11 +1,12 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Landing from './components/Landing';
-import Footer from './components/Footer';
+import Navbar from './components/navbar';
+import Landing from './components/landing';
+import Footer from './components/footer';
 import WorkExperience from './components/WorkExperience';
-import OutSourceTechTeam from './components/OutSourceTechTeam';
+import OutSourceTechTeam from './components/OutSourceTalent';
 import OutSourceTechServices from './components/OutSourceTechServices';
+import ComingSoon from './components/ComingSoon';
 
 const App = () => {
   return (
