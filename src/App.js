@@ -2,13 +2,12 @@ import React from 'react';
 import { createTheme, ThemeProvider, CssBaseline, Container } from '@mui/material';
 import Navbar from './components/navbar';
 import Landing from './components/landing';
-// import ProjectsPage from './components/ProjectsPage';
 import ComingSoon from './components/ComingSoon';
 import Footer from './components/footer';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import WorkExperience from './components/WorkExperience'; 
 import OutSourceTechTeam from './components/OutSourceTalent';
 import OutSourceTechServices from './components/OutSourceTechServices';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
   // Define the dark theme
@@ -38,7 +37,7 @@ const App = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline /> {/* Resets the CSS to fit the dark theme */}
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}> {/* Add basename here */}
         <Navbar />
         <Container maxWidth="lg" sx={{ minHeight: '80vh', paddingTop: '50px' }}>
           <Routes>
