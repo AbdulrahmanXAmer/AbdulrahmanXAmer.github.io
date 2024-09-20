@@ -25,9 +25,7 @@ import photo from '../media/profilephoto.jpeg';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
-// import Projects from './projects';
 
-// Skills list (same as your previous one)
 const skills = [
   { name: 'Python', icon: <CodeIcon /> },
   { name: 'R', icon: <FunctionsIcon /> },
@@ -75,16 +73,16 @@ const skills = [
 
 const Landing = () => {
   return (
-    <Container maxWidth="lg" style={{ marginTop: '50px', fontFamily: '"Open Sans", sans-serif' }}>
+    <Container maxWidth="lg" sx={{ marginTop: '50px', padding: { xs: '10px', sm: '30px' }, fontFamily: '"Open Sans", sans-serif' }}>
       {/* Profile Section */}
       <Paper
         elevation={5} 
         sx={{
-          padding: '30px',
+          padding: { xs: '20px', sm: '30px' },
           marginBottom: '30px',
-          background: 'linear-gradient(135deg, #424242, #303030)', // Darker gradient
+          background: 'linear-gradient(135deg, #424242, #303030)',
           borderRadius: '20px',
-          color: '#fff', // Make text white for better contrast on background
+          color: '#fff',
         }}
       >
         <Grid container spacing={2} alignItems="center">
@@ -93,39 +91,37 @@ const Landing = () => {
               alt="Abdulrahman Amer"
               src={photo}
               sx={{
-                width: 350,
-                height: 350,
+                width: { xs: 200, sm: 350 },
+                height: { xs: 200, sm: 350 },
                 margin: '0 auto',
-                boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.3)', // Add a nice shadow
-                border: '4px solid #fff', // White border to highlight against background
+                boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.3)',
+                border: '4px solid #fff',
               }}
             />
           </Grid>
 
           <Grid item xs={12} sm={8}>
             <Box sx={{ textAlign: { xs: 'center', sm: 'left' } }}>
-              <Typography variant="h3" sx={{ fontWeight: 'bold', fontFamily: '"Roboto Slab", serif' }} gutterBottom>
+              <Typography variant="h4" sx={{ fontWeight: 'bold', fontFamily: '"Roboto Slab", serif', fontSize: { xs: '2rem', sm: '3rem' } }} gutterBottom>
                 Abdulrahman Amer
               </Typography>
 
-              <Box display="flex" alignItems="center" sx={{ marginBottom: '10px' }}>
+              <Box display="flex" justifyContent={{ xs: 'center', sm: 'left' }} alignItems="center" sx={{ marginBottom: '10px' }}>
                 <LocationOnIcon sx={{ marginRight: '10px' }} />
-                <Typography variant="h6" sx={{ fontFamily: '"Open Sans", sans-serif' }}>NYC</Typography>
+                <Typography variant="h6">NYC</Typography>
               </Box>
 
-              <Box display="flex" alignItems="center" sx={{ marginBottom: '10px' }}>
+              <Box display="flex" justifyContent={{ xs: 'center', sm: 'left' }} alignItems="center" sx={{ marginBottom: '10px' }}>
                 <PhoneIcon sx={{ marginRight: '10px' }} />
-                <Typography variant="h6" sx={{ fontFamily: '"Open Sans", sans-serif' }}>347-785-4017</Typography>
+                <Typography variant="h6">347-785-4017</Typography>
               </Box>
 
-              <Box display="flex" alignItems="center" sx={{ marginBottom: '10px' }}>
+              <Box display="flex" justifyContent={{ xs: 'center', sm: 'left' }} alignItems="center" sx={{ marginBottom: '10px' }}>
                 <EmailIcon sx={{ marginRight: '10px' }} />
-                <Typography variant="h6" sx={{ fontFamily: '"Open Sans", sans-serif' }}>rocky11229@gmail.com</Typography>
+                <Typography variant="h6">rocky11229@gmail.com</Typography>
               </Box>
 
-    
-
-              <Typography variant="h5" sx={{ fontStyle: 'italic', marginTop: '20px', fontFamily: '"Open Sans", sans-serif' }}>
+              <Typography variant="h6" sx={{ fontStyle: 'italic', marginTop: '20px', fontFamily: '"Open Sans", sans-serif' }}>
                 Data Scientist | Machine Learning Engineer | Software Developer | Cloud Architect | Sales | Innovation
               </Typography>
             </Box>
@@ -152,7 +148,7 @@ const Landing = () => {
         </Typography>
         <Grid container spacing={2} justifyContent="center">
           {skills.map((skill, index) => (
-            <Grid item xs={3} key={index}>
+            <Grid item xs={6} sm={4} md={3} key={index}>
               <Box
                 display="flex"
                 flexDirection="column"
@@ -178,27 +174,26 @@ const Landing = () => {
           ))}
         </Grid>
       </Box>
-      {/* <Projects/> */}
 
       {/* CTA Button */}
       <Button
-  variant="contained"
-  href="/projects" 
-  color="primary"
-  size="large"
-  sx={{
-    marginTop: '30px',
-    fontFamily: '"Open Sans", sans-serif',
-    display: 'flex',       // This makes the button a flex container
-    justifyContent: 'center',  // Align horizontally to the center
-    marginLeft: 'auto',    // Centers the button horizontally within the parent container
-    marginRight: 'auto',
-  }}
->
-  Check Out My Work
-</Button>
+        variant="contained"
+        href="https://abdulrahmanxamer.github.io/Me/#/projects"
+        color="primary"
+        size="large"
+        sx={{
+          marginTop: '30px',
+          fontFamily: '"Open Sans", sans-serif',
+          display: 'flex',
+          justifyContent: 'center',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          padding: { xs: '10px 20px', sm: '12px 24px' },
+        }}
+      >
+        Check Out My Work
+      </Button>
     </Container>
-   
   );
 };
 

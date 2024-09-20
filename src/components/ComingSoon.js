@@ -26,7 +26,7 @@ const ComingSoon = () => {
         <Button 
           variant="contained" 
           color="primary" 
-          href="/" 
+          href="https://abdulrahmanxamer.github.io/Me/" 
           sx={{ fontWeight: 'bold', fontFamily: '"Open Sans", sans-serif' }}
         >
           Go Back Home
